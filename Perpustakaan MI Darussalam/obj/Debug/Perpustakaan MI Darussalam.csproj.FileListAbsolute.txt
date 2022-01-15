@@ -1,0 +1,15 @@
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\bin\Debug\Perpustakaan MI Darussalam.exe.config
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\bin\Debug\Perpustakaan MI Darussalam.exe
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\bin\Debug\Perpustakaan MI Darussalam.pdb
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan MI Darussalam.csprojAssemblyReference.cache
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormDataAnggota.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormDataBuku.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormLogin.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormMenuUtama.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormPeminjaman.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormPengembalian.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.Properties.Resources.resources
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan MI Darussalam.csproj.GenerateResource.cache
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan MI Darussalam.csproj.CoreCompileInputs.cache
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan MI Darussalam.exe
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan MI Darussalam.pdb
