@@ -27,11 +27,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (e.CloseReason != CloseReason.FormOwnerClosing)
-            {
-                this.Owner.Close();
-                Application.Exit();
-            }
+            this.Close();
         }
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
@@ -63,7 +59,8 @@ namespace Perpustakaan_MI_Darussalam
                 {
                     if (TextPassword.Text.ToLower().Trim() == ds.Tables[0].Rows[0]["Password"].ToString().Trim().ToLower())
                     {
-                        this.Hide();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
                     }
                     else
                     {
