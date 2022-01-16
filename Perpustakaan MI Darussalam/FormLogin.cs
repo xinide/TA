@@ -27,10 +27,12 @@ namespace Perpustakaan_MI_Darussalam
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (e.CloseReason != CloseReason.FormOwnerClosing)
+            {
+                this.Owner.Close();
                 Application.Exit();
-                this.Dispose();
+            }
         }
-
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
             LoginUser();
@@ -86,8 +88,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            this.Dispose();
+            this.Close();
         }
 
         private void TextUsername_TextChanged(object sender, EventArgs e)

@@ -52,7 +52,45 @@ namespace Perpustakaan_MI_Darussalam
 
         private void laporanToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            axCrystalReport1.ReportFileName = "lap_buku.rpt";
+            axCrystalReport1.ReportFileName = "lap.buku.rpt";
+            axCrystalReport1.DiscardSavedData = true;
+            axCrystalReport1.WindowLeft = 0;
+            axCrystalReport1.WindowTop = 0;
+            axCrystalReport1.WindowWidth = 1000;
+            axCrystalReport1.WindowHeight = 700;
+            axCrystalReport1.Action = 1;
+        }
+
+        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void laporanDataAnggotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axCrystalReport1.ReportFileName = "lap.anggota.rpt";
+            axCrystalReport1.DiscardSavedData = true;
+            axCrystalReport1.WindowLeft = 0;
+            axCrystalReport1.WindowTop = 0;
+            axCrystalReport1.WindowWidth = 1000;
+            axCrystalReport1.WindowHeight = 700;
+            axCrystalReport1.Action = 1;
+        }
+
+        private void laporanPeminjamanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axCrystalReport1.ReportFileName = "lap.peminjaman.rpt";
+            axCrystalReport1.DiscardSavedData = true;
+            axCrystalReport1.WindowLeft = 0;
+            axCrystalReport1.WindowTop = 0;
+            axCrystalReport1.WindowWidth = 1000;
+            axCrystalReport1.WindowHeight = 700;
+            axCrystalReport1.Action = 1;
+        }
+
+        private void laporanPengembalianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            axCrystalReport1.ReportFileName = "lap.pengembalian.rpt";
             axCrystalReport1.DiscardSavedData = true;
             axCrystalReport1.WindowLeft = 0;
             axCrystalReport1.WindowTop = 0;

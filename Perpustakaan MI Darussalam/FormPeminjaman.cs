@@ -64,18 +64,17 @@ namespace Perpustakaan_MI_Darussalam
 
         private void ButtonGK_Click(object sender, EventArgs e)
         {
-            Random r = new Random();
-            int iid;
-            while ((iid = r.Next(100, 9)) != iid) ;
-            Convert.ToString(iid);
+            Guid myuuid = Guid.NewGuid();
 
-            TextKodePinjam.Text = "PEM" + DateTime.UtcNow.ToString("ddMM") + iid;
+            string uuid = myuuid.ToString();
+
+            TextKodePinjam.Text = "PEM" + DateTime.UtcNow.ToString("ddMM") + uuid;
         }
 
         private void ButtonSimpanPeminjaman_Click(object sender, EventArgs e)
         {
             Perpustakaan.cmd = new OleDbCommand
-                ("Select * From Peminjaman where Kode_Pinjam=" + TextKodePinjam.Text + "", Perpustakaan.con);
+                ("Select * From Peminjaman where Kode_Pinjam='" + TextKodePinjam.Text + "'", Perpustakaan.con);
             Perpustakaan.dtr = Perpustakaan.cmd.ExecuteReader();
 
             if (Perpustakaan.dtr.HasRows)
@@ -204,7 +203,7 @@ namespace Perpustakaan_MI_Darussalam
                     "Kode_Buku ='" + TextKBPeminjaman.Text + "'," +
                     "Tanggal_Pinjam ='" + dateTimePicker1.Text + "'," +
                     "Tanggal_BatasPinjam ='" + dateTimePicker2.Text + "' where " +
-                    "Kode_Pinjam = " + TextKodePinjam.Text + "", Perpustakaan.con);
+                    "Kode_Pinjam = '" + TextKodePinjam.Text + "'", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
                 ambildata();
 

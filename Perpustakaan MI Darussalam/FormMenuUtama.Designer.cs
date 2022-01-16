@@ -104,6 +104,7 @@
             this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
             this.laporanToolStripMenuItem.Size = new System.Drawing.Size(105, 31);
             this.laporanToolStripMenuItem.Text = "Laporan";
+            this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click);
             // 
             // laporanToolStripMenuItem1
             // 
@@ -117,18 +118,21 @@
             this.laporanDataAnggotaToolStripMenuItem.Name = "laporanDataAnggotaToolStripMenuItem";
             this.laporanDataAnggotaToolStripMenuItem.Size = new System.Drawing.Size(318, 32);
             this.laporanDataAnggotaToolStripMenuItem.Text = "Laporan Data Anggota";
+            this.laporanDataAnggotaToolStripMenuItem.Click += new System.EventHandler(this.laporanDataAnggotaToolStripMenuItem_Click);
             // 
             // laporanPeminjamanToolStripMenuItem
             // 
             this.laporanPeminjamanToolStripMenuItem.Name = "laporanPeminjamanToolStripMenuItem";
             this.laporanPeminjamanToolStripMenuItem.Size = new System.Drawing.Size(318, 32);
             this.laporanPeminjamanToolStripMenuItem.Text = "Laporan Peminjaman";
+            this.laporanPeminjamanToolStripMenuItem.Click += new System.EventHandler(this.laporanPeminjamanToolStripMenuItem_Click);
             // 
             // laporanPengembalianToolStripMenuItem
             // 
             this.laporanPengembalianToolStripMenuItem.Name = "laporanPengembalianToolStripMenuItem";
             this.laporanPengembalianToolStripMenuItem.Size = new System.Drawing.Size(318, 32);
             this.laporanPengembalianToolStripMenuItem.Text = "Laporan Pengembalian";
+            this.laporanPengembalianToolStripMenuItem.Click += new System.EventHandler(this.laporanPengembalianToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 

@@ -78,7 +78,7 @@ namespace Perpustakaan_MI_Darussalam
         private void ButtonCekDenda_Click(object sender, EventArgs e)
         {
             Perpustakaan.cmd = new OleDbCommand
-                ("select * From Peminjaman where Kode_Pinjam=" + ComboBoxKodePinjam.Text + "", Perpustakaan.con);
+                ("select * From Peminjaman where Kode_Pinjam='" + ComboBoxKodePinjam.Text + "'", Perpustakaan.con);
             Perpustakaan.dtr = Perpustakaan.cmd.ExecuteReader();
             Perpustakaan.dtr.Read();
 

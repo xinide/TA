@@ -38,6 +38,7 @@
             // 
             // ButtonExit
             // 
+            this.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.ButtonExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonExit.Location = new System.Drawing.Point(322, 156);
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
