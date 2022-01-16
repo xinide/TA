@@ -64,7 +64,7 @@ namespace Perpustakaan_MI_Darussalam
         private void ButtonSimpanPeminjam_Click(object sender, EventArgs e)
         {
             Perpustakaan.cmd = new OleDbCommand
-                ("select * From Anggota where ID_Anggota='" + TextDataAnggota.Text + "'", Perpustakaan.con);
+                ("select * From Anggota where ID_Anggota=" + TextDataAnggota.Text + "", Perpustakaan.con);
             Perpustakaan.dtr = Perpustakaan.cmd.ExecuteReader();
 
             if (Perpustakaan.dtr.HasRows)
@@ -116,7 +116,7 @@ namespace Perpustakaan_MI_Darussalam
                 MessageBoxIcon.Question) == DialogResult.OK)
             {
                 Perpustakaan.cmd = new OleDbCommand
-                    ("DELETE FROM Anggota where ID_Anggota='" + kode + "'", Perpustakaan.con);
+                    ("DELETE FROM Anggota where ID_Anggota=" + kode + "", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
                 ambildata();
 
@@ -133,10 +133,92 @@ namespace Perpustakaan_MI_Darussalam
 
         private void TextCariAnggota_TextChanged(object sender, EventArgs e)
         {
-            if (ComboPilihanAnggota.SelectIndex == 0)
+                if (ComboPilihanAnggota.SelectedIndex == 0)
+                {
+                    Perpustakaan.daAnggota = new OleDbDataAdapter("SELECT * FROM Anggota where ID_Anggota like '%" + TextCariAnggota.Text + "%'", Perpustakaan.con);
+                }
+                else if (ComboPilihanAnggota.SelectedIndex == 1)
+                {
+                    Perpustakaan.daAnggota = new OleDbDataAdapter("SELECT * FROM Anggota where Nama_Anggota like '%" + TextCariAnggota.Text + "%'", Perpustakaan.con);
+                }
+                else if (ComboPilihanAnggota.SelectedIndex == 3)
+                {
+                    Perpustakaan.daAnggota = new OleDbDataAdapter("SELECT * FROM Anggota where Jenis_Kelamin like '%" + TextCariAnggota.Text + "%'", Perpustakaan.con);
+                }
+                else if (ComboPilihanAnggota.SelectedIndex == 3)
+                {
+                    Perpustakaan.daAnggota = new OleDbDataAdapter("SELECT * FROM Anggota where Alamat like '%" + TextCariAnggota.Text + "%'", Perpustakaan.con);
+                }
+                else if (ComboPilihanAnggota.SelectedIndex == 4)
+                {
+                    Perpustakaan.daAnggota = new OleDbDataAdapter("SELECT * FROM Anggota where Status like '%" + TextCariAnggota.Text + "%'", Perpustakaan.con);
+                }
+                ambildata();
+              }
+
+        private void ButtonBatalAnggota_Click(object sender, EventArgs e)
+        {
+            ComboPilihanAnggota.SelectedIndex = -1;
+            TextCariAnggota.Clear();
+
+            Perpustakaan.daAnggota = new OleDbDataAdapter
+                ("select * from Anggota", Perpustakaan.con);
+            ambildata();
+            ButtonSimpanPeminjam.Enabled = true;
+            ButtonHapusAnggota.Enabled = true;
+            TextDataAnggota.Enabled = true;
+
+            if (ButtonKoreksiAnggota.Text == "Edit")
             {
-                Perpustakaan.daBuku = new OleDbDataAdapter("SELECT * FROM Anggota where ID_Anggota")
+                ButtonKoreksiAnggota.Text = "Koreksi";
             }
+            bersih();
+        }
+
+        private void ButtonKoreksiAnggota_Click(object sender, EventArgs e)
+        {
+            if (ButtonKoreksiAnggota.Text == "Koreksi")
+            {
+                ButtonKoreksiAnggota.Text = "Edit";
+                ButtonSimpanPeminjam.Enabled = false;
+                ButtonHapusAnggota.Enabled = false;
+                TextDataAnggota.Enabled = false;
+
+                int brs;
+                brs = dataGridView1.CurrentRow.Index;
+                TextDataAnggota.Text = dataGridView1[0, brs].Value.ToString();
+                TextNamaAnggota.Text = dataGridView1[1, brs].Value.ToString();
+                ComboJenisKAnggota.Text = dataGridView1[2, brs].Value.ToString();
+                TextAlamatAnggota.Text = dataGridView1[3, brs].Value.ToString();
+                ComboStatusAnggota.Text = dataGridView1[4, brs].Value.ToString();
+            }
+            else if (ButtonKoreksiAnggota.Text == "Edit")
+            {
+                ButtonKoreksiAnggota.Text = "Koreksi";
+                ButtonSimpanPeminjam.Enabled = true;
+                ButtonHapusAnggota.Enabled = true;
+                TextDataAnggota.Enabled = true;
+
+                Perpustakaan.cmd = new OleDbCommand
+                    ("update Anggota set " +
+                    "Nama_Anggota ='" + TextNamaAnggota.Text + "'," +
+                    "Jenis_Kelamin ='" + ComboJenisKAnggota.Text + "'," + "Alamat ='" + TextAlamatAnggota.Text + "'," +
+                    "Status ='" + ComboStatusAnggota.Text + "' where " +
+                    "ID_Anggota = " + TextDataAnggota.Text + "", Perpustakaan.con);
+                Perpustakaan.cmd.ExecuteNonQuery();
+                ambildata();
+
+                MessageBox.Show("Data sudah terEdit", "Pesan",
+                                 MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                bersih();
+            }
+    }
+
+        private void ButtonTutupAnggota_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
-}
+    }
+

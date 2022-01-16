@@ -80,6 +80,12 @@
             // ComboPilihanAnggota
             // 
             this.ComboPilihanAnggota.FormattingEnabled = true;
+            this.ComboPilihanAnggota.Items.AddRange(new object[] {
+            "ID Anggota",
+            "Nama Anggota",
+            "Jenis Kelamin",
+            "Alamat",
+            "Status"});
             this.ComboPilihanAnggota.Location = new System.Drawing.Point(148, 45);
             this.ComboPilihanAnggota.Name = "ComboPilihanAnggota";
             this.ComboPilihanAnggota.Size = new System.Drawing.Size(257, 35);
@@ -172,6 +178,9 @@
             // ComboStatusAnggota
             // 
             this.ComboStatusAnggota.FormattingEnabled = true;
+            this.ComboStatusAnggota.Items.AddRange(new object[] {
+            "Siswa",
+            "Guru"});
             this.ComboStatusAnggota.Location = new System.Drawing.Point(230, 211);
             this.ComboStatusAnggota.Name = "ComboStatusAnggota";
             this.ComboStatusAnggota.Size = new System.Drawing.Size(238, 35);
@@ -194,6 +203,7 @@
             this.ButtonKoreksiAnggota.TabIndex = 14;
             this.ButtonKoreksiAnggota.Text = "Koreksi";
             this.ButtonKoreksiAnggota.UseVisualStyleBackColor = true;
+            this.ButtonKoreksiAnggota.Click += new System.EventHandler(this.ButtonKoreksiAnggota_Click);
             // 
             // ButtonHapusAnggota
             // 
@@ -225,6 +235,9 @@
             // ComboJenisKAnggota
             // 
             this.ComboJenisKAnggota.FormattingEnabled = true;
+            this.ComboJenisKAnggota.Items.AddRange(new object[] {
+            "Perempuan",
+            "Laki-Laki"});
             this.ComboJenisKAnggota.Location = new System.Drawing.Point(230, 130);
             this.ComboJenisKAnggota.Name = "ComboJenisKAnggota";
             this.ComboJenisKAnggota.Size = new System.Drawing.Size(238, 35);
@@ -254,6 +267,7 @@
             this.ButtonBatalAnggota.TabIndex = 17;
             this.ButtonBatalAnggota.Text = "Batal";
             this.ButtonBatalAnggota.UseVisualStyleBackColor = true;
+            this.ButtonBatalAnggota.Click += new System.EventHandler(this.ButtonBatalAnggota_Click);
             // 
             // ButtonTutupAnggota
             // 
@@ -263,6 +277,7 @@
             this.ButtonTutupAnggota.TabIndex = 18;
             this.ButtonTutupAnggota.Text = "Tutup";
             this.ButtonTutupAnggota.UseVisualStyleBackColor = true;
+            this.ButtonTutupAnggota.Click += new System.EventHandler(this.ButtonTutupAnggota_Click);
             // 
             // FormDataAnggota
             // 

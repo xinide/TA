@@ -75,7 +75,7 @@ namespace Perpustakaan_MI_Darussalam
         private void ButtonSimpanPeminjaman_Click(object sender, EventArgs e)
         {
             Perpustakaan.cmd = new OleDbCommand
-                ("Select * From Peminjaman where Kode_Pinjam='" + TextKodePinjam.Text + "'", Perpustakaan.con);
+                ("Select * From Peminjaman where Kode_Pinjam=" + TextKodePinjam.Text + "", Perpustakaan.con);
             Perpustakaan.dtr = Perpustakaan.cmd.ExecuteReader();
 
             if (Perpustakaan.dtr.HasRows)
@@ -130,15 +130,23 @@ namespace Perpustakaan_MI_Darussalam
         {
             if (ComboPilihanPeminjaman.SelectedIndex == 0)
             {
-                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where Kode_Pinjam like '%" + TextCariPeminjaman + "%'", Perpustakaan.con);
+                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where Kode_Pinjam like '%" + TextCariPeminjaman.Text + "%'", Perpustakaan.con);
             }
             else if (ComboPilihanPeminjaman.SelectedIndex == 1)
             {
-                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where ID_Anggota like '%" + TextCariPeminjaman + "%'", Perpustakaan.con);
+                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where ID_Anggota like '%" + TextCariPeminjaman.Text + "%'", Perpustakaan.con);
             }
             else if (ComboPilihanPeminjaman.SelectedIndex == 2)
             {
-                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where Kode_Buku like '%" + TextCariPeminjaman + "%'", Perpustakaan.con);
+                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where Kode_Buku like '%" + TextCariPeminjaman.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPeminjaman.SelectedIndex == 3 )
+            {
+                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where Tanggal_Pinjam like '%" + TextCariPeminjaman.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPeminjaman.SelectedIndex == 4)
+            {
+                Perpustakaan.daPeminjaman = new OleDbDataAdapter("SELECT * FROM Peminjaman where Tanggal_Batas_Pinjam like '%" + TextCariPeminjaman.Text + "%'", Perpustakaan.con);
             }
             ambildata();
         }
@@ -155,7 +163,7 @@ namespace Perpustakaan_MI_Darussalam
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 Perpustakaan.cmd = new OleDbCommand
-                    ("delete FROM Peminjaman where Kode_Pinjam = '" + kode + "'", Perpustakaan.con);
+                    ("delete FROM Peminjaman where Kode_Pinjam = " + kode + "", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
                 ambildata();
 
@@ -179,9 +187,9 @@ namespace Perpustakaan_MI_Darussalam
                 TextIDAnggota.Text = dataGridView1[1, brs].Value.ToString();
                 TextKBPeminjaman.Text = dataGridView1[2, brs].Value.ToString();
                 dateTimePicker1.Value =
-                    Convert.ToDateTime(dataGridView1[3, brs].Value);
-                dateTimePicker2.Value =
                     Convert.ToDateTime(dataGridView1[4, brs].Value);
+                dateTimePicker2.Value =
+                    Convert.ToDateTime(dataGridView1[5, brs].Value);
             }
             else if (ButtonKoreksiPeminjaman.Text == "Edit")
             {
@@ -192,11 +200,11 @@ namespace Perpustakaan_MI_Darussalam
 
                 Perpustakaan.cmd = new OleDbCommand
                     ("update Peminjaman set " +
-                    "Kode_Pinjam ='" + TextKodePinjam.Text + "'," +
                     "ID_Anggota ='" + TextIDAnggota.Text + "'," +
                     "Kode_Buku ='" + TextKBPeminjaman.Text + "'," +
-                    "Tanggal_Pinjam ='" + dateTimePicker1.Text + "' where " +
-                    "Tanggal_BatasPinjam = '" + dateTimePicker2.Text + "'", Perpustakaan.con);
+                    "Tanggal_Pinjam ='" + dateTimePicker1.Text + "'," +
+                    "Tanggal_BatasPinjam ='" + dateTimePicker2.Text + "' where " +
+                    "Kode_Pinjam = " + TextKodePinjam.Text + "", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
                 ambildata();
 
@@ -224,6 +232,21 @@ namespace Perpustakaan_MI_Darussalam
                 ButtonKoreksiPeminjaman.Text = "Koreksi";
             }
             bersih();
+        }
+
+        private void ButtonTutupPeminjaman_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void TextKodePinjam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupCariPeminjaman_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

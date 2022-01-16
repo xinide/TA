@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuUtama));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dataBukuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataAnggotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +40,9 @@
             this.laporanPeminjamanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanPengembalianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.axCrystalReport1 = new AxCrystal.AxCrystalReport();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axCrystalReport1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,6 +110,7 @@
             this.laporanToolStripMenuItem1.Name = "laporanToolStripMenuItem1";
             this.laporanToolStripMenuItem1.Size = new System.Drawing.Size(318, 32);
             this.laporanToolStripMenuItem1.Text = "Laporan Data Buku";
+            this.laporanToolStripMenuItem1.Click += new System.EventHandler(this.laporanToolStripMenuItem1_Click);
             // 
             // laporanDataAnggotaToolStripMenuItem
             // 
@@ -134,11 +138,21 @@
             this.loginToolStripMenuItem.Text = "Keluar";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
+            // axCrystalReport1
+            // 
+            this.axCrystalReport1.Enabled = true;
+            this.axCrystalReport1.Location = new System.Drawing.Point(803, 7);
+            this.axCrystalReport1.Name = "axCrystalReport1";
+            this.axCrystalReport1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axCrystalReport1.OcxState")));
+            this.axCrystalReport1.Size = new System.Drawing.Size(28, 28);
+            this.axCrystalReport1.TabIndex = 1;
+            // 
             // FormMenuUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 608);
+            this.Controls.Add(this.axCrystalReport1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
@@ -148,6 +162,7 @@
             this.Load += new System.EventHandler(this.FormMenuUtama_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axCrystalReport1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +181,7 @@
         private System.Windows.Forms.ToolStripMenuItem laporanPeminjamanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laporanPengembalianToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private AxCrystal.AxCrystalReport axCrystalReport1;
     }
 }
 

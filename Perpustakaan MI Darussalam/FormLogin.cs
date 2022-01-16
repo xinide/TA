@@ -13,6 +13,7 @@ namespace Perpustakaan_MI_Darussalam
 {
     public partial class FormLogin : Form
     {
+
         Perpustakaan connection = new Perpustakaan();
         public FormLogin()
         {
@@ -26,7 +27,8 @@ namespace Perpustakaan_MI_Darussalam
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+                Application.Exit();
+                this.Dispose();
         }
 
         private void ButtonLogin_Click(object sender, EventArgs e)
@@ -86,6 +88,11 @@ namespace Perpustakaan_MI_Darussalam
         {
             Application.Exit();
             this.Dispose();
+        }
+
+        private void TextUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

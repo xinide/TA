@@ -49,5 +49,16 @@ namespace Perpustakaan_MI_Darussalam
             newform = new FormLogin();
             newform.ShowDialog(this);
         }
+
+        private void laporanToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            axCrystalReport1.ReportFileName = "lap_buku.rpt";
+            axCrystalReport1.DiscardSavedData = true;
+            axCrystalReport1.WindowLeft = 0;
+            axCrystalReport1.WindowTop = 0;
+            axCrystalReport1.WindowWidth = 1000;
+            axCrystalReport1.WindowHeight = 700;
+            axCrystalReport1.Action = 1;
+        }
     }
 }

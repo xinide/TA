@@ -59,13 +59,14 @@
             // ButtonTutupPeminjaman
             // 
             this.ButtonTutupPeminjaman.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonTutupPeminjaman.Location = new System.Drawing.Point(1054, 269);
+            this.ButtonTutupPeminjaman.Location = new System.Drawing.Point(1065, 253);
             this.ButtonTutupPeminjaman.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonTutupPeminjaman.Name = "ButtonTutupPeminjaman";
             this.ButtonTutupPeminjaman.Size = new System.Drawing.Size(126, 67);
             this.ButtonTutupPeminjaman.TabIndex = 10;
             this.ButtonTutupPeminjaman.Text = "Tutup";
             this.ButtonTutupPeminjaman.UseVisualStyleBackColor = true;
+            this.ButtonTutupPeminjaman.Click += new System.EventHandler(this.ButtonTutupPeminjaman_Click);
             // 
             // GroupInputPeminjaman
             // 
@@ -176,6 +177,7 @@
             this.TextKodePinjam.Name = "TextKodePinjam";
             this.TextKodePinjam.Size = new System.Drawing.Size(252, 35);
             this.TextKodePinjam.TabIndex = 5;
+            this.TextKodePinjam.TextChanged += new System.EventHandler(this.TextKodePinjam_TextChanged);
             // 
             // label5
             // 
@@ -242,6 +244,7 @@
             this.GroupCariPeminjaman.TabIndex = 9;
             this.GroupCariPeminjaman.TabStop = false;
             this.GroupCariPeminjaman.Text = "Cari Data Peminjaman";
+            this.GroupCariPeminjaman.Enter += new System.EventHandler(this.GroupCariPeminjaman_Enter);
             // 
             // TextCariPeminjaman
             // 
@@ -255,6 +258,12 @@
             // ComboPilihanPeminjaman
             // 
             this.ComboPilihanPeminjaman.FormattingEnabled = true;
+            this.ComboPilihanPeminjaman.Items.AddRange(new object[] {
+            "Kode Pinjam",
+            "ID Anggota",
+            "Kode Buku",
+            "Tanggal Pinjam",
+            "Tanggal Batas Pinjam"});
             this.ComboPilihanPeminjaman.Location = new System.Drawing.Point(178, 78);
             this.ComboPilihanPeminjaman.Margin = new System.Windows.Forms.Padding(4);
             this.ComboPilihanPeminjaman.Name = "ComboPilihanPeminjaman";
@@ -295,7 +304,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(884, 269);
+            this.button3.Location = new System.Drawing.Point(885, 253);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 67);

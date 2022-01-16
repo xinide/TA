@@ -89,6 +89,7 @@
             this.ButtonKoreksiBuku.TabIndex = 14;
             this.ButtonKoreksiBuku.Text = "Koreksi";
             this.ButtonKoreksiBuku.UseVisualStyleBackColor = true;
+            this.ButtonKoreksiBuku.Click += new System.EventHandler(this.ButtonKoreksiBuku_Click);
             // 
             // ButtonHapusBuku
             // 
@@ -98,6 +99,7 @@
             this.ButtonHapusBuku.TabIndex = 13;
             this.ButtonHapusBuku.Text = "Hapus";
             this.ButtonHapusBuku.UseVisualStyleBackColor = true;
+            this.ButtonHapusBuku.Click += new System.EventHandler(this.ButtonHapusBuku_Click);
             // 
             // ButtonSimpanBuku
             // 
@@ -107,6 +109,7 @@
             this.ButtonSimpanBuku.TabIndex = 12;
             this.ButtonSimpanBuku.Text = "Simpan";
             this.ButtonSimpanBuku.UseVisualStyleBackColor = true;
+            this.ButtonSimpanBuku.Click += new System.EventHandler(this.ButtonSimpanBuku_Click);
             // 
             // TextJumlahBuku
             // 
@@ -232,14 +235,22 @@
             this.TextCariBuku.Name = "TextCariBuku";
             this.TextCariBuku.Size = new System.Drawing.Size(220, 35);
             this.TextCariBuku.TabIndex = 3;
+            this.TextCariBuku.TextChanged += new System.EventHandler(this.TextCariBuku_TextChanged);
             // 
             // ComboPilihanBuku
             // 
             this.ComboPilihanBuku.FormattingEnabled = true;
+            this.ComboPilihanBuku.Items.AddRange(new object[] {
+            "Kode Buku",
+            "Judul Buku",
+            "Pengarang",
+            "Penerbit",
+            "Tahun Terbit"});
             this.ComboPilihanBuku.Location = new System.Drawing.Point(140, 47);
             this.ComboPilihanBuku.Name = "ComboPilihanBuku";
             this.ComboPilihanBuku.Size = new System.Drawing.Size(220, 35);
             this.ComboPilihanBuku.TabIndex = 2;
+            this.ComboPilihanBuku.SelectedIndexChanged += new System.EventHandler(this.ComboPilihanBuku_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -267,6 +278,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Batal";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -276,6 +288,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Tutup";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormDataBuku
             // 
@@ -288,7 +301,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GroupCariBukuPeminjaman);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDataBuku";
             this.Text = "Data Buku";
             this.Load += new System.EventHandler(this.FormDataBuku_Load);

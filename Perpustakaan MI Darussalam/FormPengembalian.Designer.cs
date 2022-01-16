@@ -30,6 +30,11 @@
         {
             this.ButtonTutupPengembalian = new System.Windows.Forms.Button();
             this.GroupPengembalian = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.KodeBukuPengembalian = new System.Windows.Forms.Label();
+            this.TextKodeBuku = new System.Windows.Forms.TextBox();
+            this.TextIDAnggota = new System.Windows.Forms.TextBox();
+            this.ComboBoxKodePinjam = new System.Windows.Forms.ComboBox();
             this.ButtonKonfirmasi = new System.Windows.Forms.Button();
             this.ButtonHitungDenda = new System.Windows.Forms.Button();
             this.ButtonCekDenda = new System.Windows.Forms.Button();
@@ -37,12 +42,10 @@
             this.TextLamaPinjamKembali = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.TextIDAnggota = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TextCariPengembalian = new System.Windows.Forms.TextBox();
@@ -51,7 +54,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ButtonBatalPengembalian = new System.Windows.Forms.Button();
-            this.ComboBoxKodePinjam = new System.Windows.Forms.ComboBox();
             this.GroupPengembalian.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,9 +67,14 @@
             this.ButtonTutupPengembalian.TabIndex = 10;
             this.ButtonTutupPengembalian.Text = "Tutup";
             this.ButtonTutupPengembalian.UseVisualStyleBackColor = true;
+            this.ButtonTutupPengembalian.Click += new System.EventHandler(this.ButtonTutupPengembalian_Click);
             // 
             // GroupPengembalian
             // 
+            this.GroupPengembalian.Controls.Add(this.label9);
+            this.GroupPengembalian.Controls.Add(this.KodeBukuPengembalian);
+            this.GroupPengembalian.Controls.Add(this.TextKodeBuku);
+            this.GroupPengembalian.Controls.Add(this.TextIDAnggota);
             this.GroupPengembalian.Controls.Add(this.ComboBoxKodePinjam);
             this.GroupPengembalian.Controls.Add(this.ButtonKonfirmasi);
             this.GroupPengembalian.Controls.Add(this.ButtonHitungDenda);
@@ -76,12 +83,10 @@
             this.GroupPengembalian.Controls.Add(this.TextLamaPinjamKembali);
             this.GroupPengembalian.Controls.Add(this.dateTimePicker2);
             this.GroupPengembalian.Controls.Add(this.dateTimePicker1);
-            this.GroupPengembalian.Controls.Add(this.TextIDAnggota);
             this.GroupPengembalian.Controls.Add(this.label6);
             this.GroupPengembalian.Controls.Add(this.label5);
             this.GroupPengembalian.Controls.Add(this.label4);
             this.GroupPengembalian.Controls.Add(this.label3);
-            this.GroupPengembalian.Controls.Add(this.label2);
             this.GroupPengembalian.Controls.Add(this.label1);
             this.GroupPengembalian.Location = new System.Drawing.Point(21, 12);
             this.GroupPengembalian.Name = "GroupPengembalian";
@@ -89,6 +94,47 @@
             this.GroupPengembalian.TabIndex = 8;
             this.GroupPengembalian.TabStop = false;
             this.GroupPengembalian.Text = "Input Data Pengembalian";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(27, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 27);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "ID Anggota";
+            // 
+            // KodeBukuPengembalian
+            // 
+            this.KodeBukuPengembalian.AutoSize = true;
+            this.KodeBukuPengembalian.Location = new System.Drawing.Point(27, 114);
+            this.KodeBukuPengembalian.Name = "KodeBukuPengembalian";
+            this.KodeBukuPengembalian.Size = new System.Drawing.Size(122, 27);
+            this.KodeBukuPengembalian.TabIndex = 19;
+            this.KodeBukuPengembalian.Text = "Kode Buku";
+            // 
+            // TextKodeBuku
+            // 
+            this.TextKodeBuku.Location = new System.Drawing.Point(263, 111);
+            this.TextKodeBuku.Name = "TextKodeBuku";
+            this.TextKodeBuku.Size = new System.Drawing.Size(269, 35);
+            this.TextKodeBuku.TabIndex = 18;
+            // 
+            // TextIDAnggota
+            // 
+            this.TextIDAnggota.Location = new System.Drawing.Point(263, 69);
+            this.TextIDAnggota.Name = "TextIDAnggota";
+            this.TextIDAnggota.Size = new System.Drawing.Size(269, 35);
+            this.TextIDAnggota.TabIndex = 17;
+            // 
+            // ComboBoxKodePinjam
+            // 
+            this.ComboBoxKodePinjam.FormattingEnabled = true;
+            this.ComboBoxKodePinjam.Location = new System.Drawing.Point(263, 28);
+            this.ComboBoxKodePinjam.Name = "ComboBoxKodePinjam";
+            this.ComboBoxKodePinjam.Size = new System.Drawing.Size(269, 35);
+            this.ComboBoxKodePinjam.TabIndex = 16;
+            this.ComboBoxKodePinjam.SelectedIndexChanged += new System.EventHandler(this.ComboBoxKodePinjam_SelectedIndexChanged);
             // 
             // ButtonKonfirmasi
             // 
@@ -122,7 +168,7 @@
             // 
             // TextDendaKembali
             // 
-            this.TextDendaKembali.Location = new System.Drawing.Point(263, 264);
+            this.TextDendaKembali.Location = new System.Drawing.Point(263, 275);
             this.TextDendaKembali.Name = "TextDendaKembali";
             this.TextDendaKembali.Size = new System.Drawing.Size(133, 35);
             this.TextDendaKembali.TabIndex = 11;
@@ -130,36 +176,29 @@
             // 
             // TextLamaPinjamKembali
             // 
-            this.TextLamaPinjamKembali.Location = new System.Drawing.Point(263, 222);
+            this.TextLamaPinjamKembali.Location = new System.Drawing.Point(263, 234);
             this.TextLamaPinjamKembali.Name = "TextLamaPinjamKembali";
             this.TextLamaPinjamKembali.Size = new System.Drawing.Size(269, 35);
             this.TextLamaPinjamKembali.TabIndex = 10;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(263, 180);
+            this.dateTimePicker2.Location = new System.Drawing.Point(263, 193);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(269, 35);
             this.dateTimePicker2.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(263, 138);
+            this.dateTimePicker1.Location = new System.Drawing.Point(263, 152);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(269, 35);
             this.dateTimePicker1.TabIndex = 8;
             // 
-            // TextIDAnggota
-            // 
-            this.TextIDAnggota.Location = new System.Drawing.Point(263, 96);
-            this.TextIDAnggota.Name = "TextIDAnggota";
-            this.TextIDAnggota.Size = new System.Drawing.Size(269, 35);
-            this.TextIDAnggota.TabIndex = 7;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 267);
+            this.label6.Location = new System.Drawing.Point(27, 278);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 27);
             this.label6.TabIndex = 5;
@@ -168,7 +207,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 225);
+            this.label5.Location = new System.Drawing.Point(27, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 27);
             this.label5.TabIndex = 4;
@@ -177,7 +216,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 186);
+            this.label4.Location = new System.Drawing.Point(25, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(227, 27);
             this.label4.TabIndex = 3;
@@ -186,25 +225,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 144);
+            this.label3.Location = new System.Drawing.Point(25, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(219, 27);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tanggal Batas Pinjam";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ID Anggota";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 55);
+            this.label1.Location = new System.Drawing.Point(27, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 27);
             this.label1.TabIndex = 0;
@@ -233,6 +264,10 @@
             // ComboPilihanPengembalian
             // 
             this.ComboPilihanPengembalian.FormattingEnabled = true;
+            this.ComboPilihanPengembalian.Items.AddRange(new object[] {
+            "Kode Pinjam",
+            "ID Anggota",
+            "Kode Buku"});
             this.ComboPilihanPengembalian.Location = new System.Drawing.Point(136, 52);
             this.ComboPilihanPengembalian.Name = "ComboPilihanPengembalian";
             this.ComboPilihanPengembalian.Size = new System.Drawing.Size(226, 35);
@@ -273,14 +308,7 @@
             this.ButtonBatalPengembalian.TabIndex = 12;
             this.ButtonBatalPengembalian.Text = "Batal";
             this.ButtonBatalPengembalian.UseVisualStyleBackColor = true;
-            // 
-            // ComboBoxKodePinjam
-            // 
-            this.ComboBoxKodePinjam.FormattingEnabled = true;
-            this.ComboBoxKodePinjam.Location = new System.Drawing.Point(263, 55);
-            this.ComboBoxKodePinjam.Name = "ComboBoxKodePinjam";
-            this.ComboBoxKodePinjam.Size = new System.Drawing.Size(269, 35);
-            this.ComboBoxKodePinjam.TabIndex = 16;
+            this.ButtonBatalPengembalian.Click += new System.EventHandler(this.ButtonBatalPengembalian_Click);
             // 
             // FormPengembalian
             // 
@@ -317,12 +345,10 @@
         private System.Windows.Forms.TextBox TextLamaPinjamKembali;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox TextIDAnggota;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox TextCariPengembalian;
@@ -332,5 +358,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ButtonBatalPengembalian;
         private System.Windows.Forms.ComboBox ComboBoxKodePinjam;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label KodeBukuPengembalian;
+        private System.Windows.Forms.TextBox TextKodeBuku;
+        private System.Windows.Forms.TextBox TextIDAnggota;
     }
 }
