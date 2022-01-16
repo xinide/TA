@@ -20,7 +20,15 @@ namespace Perpustakaan_MI_Darussalam
         private void FormMenuUtama_Load(object sender, EventArgs e)
         {
             this.Show();
-            new FormLogin().ShowDialog();
+            // new FormLogin().ShowDialog();
+
+using(FormLogin formLogin = new FormLogin())
+{
+if(formLogin.ShowDialog() != DialogResult.OK)
+{
+this.Close();
+}
+}
         }
 
         private void dataBukuToolStripMenuItem_Click(object sender, EventArgs e)
