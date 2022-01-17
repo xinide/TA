@@ -134,7 +134,7 @@ namespace Perpustakaan_MI_Darussalam
             Perpustakaan.cmd = new OleDbCommand
                 ("UPDATE Peminjaman SET " +
                 "Status='" + "Dikembalikan" + "' where " +
-                "Kode_Pinjam =" + ComboBoxKodePinjam.Text + "", Perpustakaan.con);
+                "Kode_Pinjam ='" + ComboBoxKodePinjam.Text + "'", Perpustakaan.con);
             Perpustakaan.cmd.ExecuteNonQuery();
             ambildata();
 
@@ -173,6 +173,45 @@ namespace Perpustakaan_MI_Darussalam
 
         private void ComboBoxKodePinjam_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TextCariPengembalian.Focus();
+        }
+
+        private void TextCariPengembalian_TextChanged(object sender, EventArgs e)
+        {
+            if (ComboPilihanPengembalian.SelectedIndex == 0)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where Kode_Pinjam like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPengembalian.SelectedIndex == 1)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where ID_Anggota like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPengembalian.SelectedIndex == 2)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where Kode_Buku like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPengembalian.SelectedIndex == 3)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where Tanggal_BatasPinjam like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPengembalian.SelectedIndex == 4)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where Tanggal_Pengembalian like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPengembalian.SelectedIndex == 4)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where Lama_Pinjam like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            else if (ComboPilihanPengembalian.SelectedIndex == 4)
+            {
+                Perpustakaan.daPengembalian = new OleDbDataAdapter("SELECT * FROM Pengembalian where Denda like '%" + TextCariPengembalian.Text + "%'", Perpustakaan.con);
+            }
+            ambildata();
 
         }
     }

@@ -18,3 +18,4 @@ D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\bin\
 D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Interop.Crystal.dll
 D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\AxInterop.Crystal.dll
 D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan MI Darussalam.csproj.ResolveComReference.cache
+D:\TUGAS AKHIR\PROSES\Perpustakaan MI Darussalam\Perpustakaan MI Darussalam\obj\Debug\Perpustakaan_MI_Darussalam.FormPenerbit.resources

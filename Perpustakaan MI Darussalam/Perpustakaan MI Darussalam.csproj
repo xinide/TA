@@ -76,6 +76,12 @@
     <Compile Include="FormPeminjaman.Designer.cs">
       <DependentUpon>FormPeminjaman.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPenerbit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenerbit.Designer.cs">
+      <DependentUpon>FormPenerbit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPengembalian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPeminjaman.resx">
       <DependentUpon>FormPeminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPenerbit.resx">
+      <DependentUpon>FormPenerbit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPengembalian.resx">
       <DependentUpon>FormPengembalian.cs</DependentUpon>

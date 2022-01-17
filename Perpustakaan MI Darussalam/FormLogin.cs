@@ -27,6 +27,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
         private void ButtonLogin_Click(object sender, EventArgs e)
@@ -85,6 +86,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 

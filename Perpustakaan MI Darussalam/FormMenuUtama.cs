@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Perpustakaan_MI_Darussalam
 {
@@ -22,13 +23,16 @@ namespace Perpustakaan_MI_Darussalam
             this.Show();
             // new FormLogin().ShowDialog();
 
-using(FormLogin formLogin = new FormLogin())
-{
-if(formLogin.ShowDialog() != DialogResult.OK)
-{
-this.Close();
-}
-}
+            using(FormLogin formLogin = new FormLogin())
+            {
+                var result = formLogin.ShowDialog();
+                Debug.WriteLine(result);
+                if(result != DialogResult.OK)
+                {
+                this.Close();
+                }
+            }
+            Debug.WriteLine("pppp");
         }
 
         private void dataBukuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,9 +57,7 @@ this.Close();
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormLogin newform;
-            newform = new FormLogin();
-            newform.ShowDialog(this);
+            this.Close();
         }
 
         private void laporanToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -105,6 +107,11 @@ this.Close();
             axCrystalReport1.WindowWidth = 1000;
             axCrystalReport1.WindowHeight = 700;
             axCrystalReport1.Action = 1;
+        }
+
+        private void axCrystalReport1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

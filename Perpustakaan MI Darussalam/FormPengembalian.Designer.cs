@@ -54,6 +54,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ButtonBatalPengembalian = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.GroupPengembalian.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -243,6 +244,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.TextCariPengembalian);
             this.groupBox1.Controls.Add(this.ComboPilihanPengembalian);
             this.groupBox1.Controls.Add(this.label8);
@@ -260,6 +262,7 @@
             this.TextCariPengembalian.Name = "TextCariPengembalian";
             this.TextCariPengembalian.Size = new System.Drawing.Size(226, 35);
             this.TextCariPengembalian.TabIndex = 16;
+            this.TextCariPengembalian.TextChanged += new System.EventHandler(this.TextCariPengembalian_TextChanged);
             // 
             // ComboPilihanPengembalian
             // 
@@ -309,6 +312,16 @@
             this.ButtonBatalPengembalian.Text = "Batal";
             this.ButtonBatalPengembalian.UseVisualStyleBackColor = true;
             this.ButtonBatalPengembalian.Click += new System.EventHandler(this.ButtonBatalPengembalian_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(148, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormPengembalian
             // 
@@ -362,5 +375,6 @@
         private System.Windows.Forms.Label KodeBukuPengembalian;
         private System.Windows.Forms.TextBox TextKodeBuku;
         private System.Windows.Forms.TextBox TextIDAnggota;
+        private System.Windows.Forms.Button button1;
     }
 }

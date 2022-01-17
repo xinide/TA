@@ -186,7 +186,7 @@ namespace Perpustakaan_MI_Darussalam
                     "Penerbit ='" + TextPenerbit.Text + "'," +
                     "Pengarang ='" + TextPengarang.Text + "'," +
                     "Tahun_Terbit ='" + TextTahunTerbit.Text + "',"+
-                    "Jumlah ='" + TextJumlahBuku.Text + "' where " +
+                    "Jumlah =" + TextJumlahBuku.Text + " where " +
                     "Kode_Buku = " + TextBuku.Text + "", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
                 ambildata();

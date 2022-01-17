@@ -41,6 +41,7 @@
             this.laporanPengembalianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axCrystalReport1 = new AxCrystal.AxCrystalReport();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axCrystalReport1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
             this.dataBukuToolStripMenuItem,
             this.dataAnggotaToolStripMenuItem,
             this.peminjamanToolStripMenuItem,
@@ -145,11 +147,19 @@
             // axCrystalReport1
             // 
             this.axCrystalReport1.Enabled = true;
-            this.axCrystalReport1.Location = new System.Drawing.Point(803, 7);
+            this.axCrystalReport1.Location = new System.Drawing.Point(964, 7);
             this.axCrystalReport1.Name = "axCrystalReport1";
             this.axCrystalReport1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axCrystalReport1.OcxState")));
             this.axCrystalReport1.Size = new System.Drawing.Size(28, 28);
             this.axCrystalReport1.TabIndex = 1;
+            this.axCrystalReport1.Enter += new System.EventHandler(this.axCrystalReport1_Enter);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 31);
+            this.toolStripMenuItem1.Text = "Data Penerbit";
             // 
             // FormMenuUtama
             // 
@@ -186,6 +196,7 @@
         private System.Windows.Forms.ToolStripMenuItem laporanPengembalianToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private AxCrystal.AxCrystalReport axCrystalReport1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

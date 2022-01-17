@@ -162,7 +162,7 @@ namespace Perpustakaan_MI_Darussalam
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 Perpustakaan.cmd = new OleDbCommand
-                    ("delete FROM Peminjaman where Kode_Pinjam = " + kode + "", Perpustakaan.con);
+                    ("delete FROM Peminjaman where Kode_Pinjam = '" + kode + "'", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
                 ambildata();
 
