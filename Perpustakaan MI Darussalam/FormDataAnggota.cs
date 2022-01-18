@@ -219,6 +219,11 @@ namespace Perpustakaan_MI_Darussalam
         {
             Close();
         }
+
+        private void ComboJenisKAnggota_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

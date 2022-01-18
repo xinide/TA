@@ -228,5 +228,10 @@ namespace Perpustakaan_MI_Darussalam
             ambildata();
 
         }
+
+        private void TextPengarang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

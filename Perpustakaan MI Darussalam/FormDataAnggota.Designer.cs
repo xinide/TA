@@ -242,6 +242,7 @@
             this.ComboJenisKAnggota.Name = "ComboJenisKAnggota";
             this.ComboJenisKAnggota.Size = new System.Drawing.Size(238, 35);
             this.ComboJenisKAnggota.TabIndex = 6;
+            this.ComboJenisKAnggota.SelectedIndexChanged += new System.EventHandler(this.ComboJenisKAnggota_SelectedIndexChanged);
             // 
             // TextNamaAnggota
             // 

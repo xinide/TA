@@ -32,7 +32,6 @@ namespace Perpustakaan_MI_Darussalam
                 this.Close();
                 }
             }
-            Debug.WriteLine("pppp");
         }
 
         private void dataBukuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,7 +61,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void laporanToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            axCrystalReport1.ReportFileName = "lap.buku.rpt";
+            axCrystalReport1.ReportFileName = "laporan_buku.rpt";
             axCrystalReport1.DiscardSavedData = true;
             axCrystalReport1.WindowLeft = 0;
             axCrystalReport1.WindowTop = 0;
@@ -78,7 +77,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void laporanDataAnggotaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axCrystalReport1.ReportFileName = "lap.anggota.rpt";
+            axCrystalReport1.ReportFileName = "laporan_anggota.rpt";
             axCrystalReport1.DiscardSavedData = true;
             axCrystalReport1.WindowLeft = 0;
             axCrystalReport1.WindowTop = 0;
@@ -89,7 +88,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void laporanPeminjamanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axCrystalReport1.ReportFileName = "lap.peminjaman.rpt";
+            axCrystalReport1.ReportFileName = "laporan_peminjaman.rpt";
             axCrystalReport1.DiscardSavedData = true;
             axCrystalReport1.WindowLeft = 0;
             axCrystalReport1.WindowTop = 0;
@@ -100,7 +99,7 @@ namespace Perpustakaan_MI_Darussalam
 
         private void laporanPengembalianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axCrystalReport1.ReportFileName = "lap.pengembalian.rpt";
+            axCrystalReport1.ReportFileName = "laporan_pengembalian.rpt";
             axCrystalReport1.DiscardSavedData = true;
             axCrystalReport1.WindowLeft = 0;
             axCrystalReport1.WindowTop = 0;
@@ -116,7 +115,12 @@ namespace Perpustakaan_MI_Darussalam
 
         private void toolStripDataPengarang_Click(object sender, EventArgs e)
         {
+            new FormPengarang().ShowDialog();
+        }
 
+        private void DataPenerbittoolStrip_Click(object sender, EventArgs e)
+        {
+            new FormPenerbit().ShowDialog(); 
         }
     }
 }

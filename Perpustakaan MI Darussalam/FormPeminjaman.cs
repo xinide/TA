@@ -26,7 +26,7 @@ namespace Perpustakaan_MI_Darussalam
         void bersih()
         {
             TextKodePinjam.Clear();
-            TextIDAnggota.Clear();
+            ComboIDAnggota.SelectedIndex();
             TextKBPeminjaman.Clear();
         }
 

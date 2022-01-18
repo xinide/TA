@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuUtama));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.DataPenerbittoolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDataPengarang = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBukuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataAnggotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peminjamanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,6 @@
             this.laporanPengembalianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axCrystalReport1 = new AxCrystal.AxCrystalReport();
-            this.toolStripDataPengarang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axCrystalReport1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,15 @@
             this.DataPenerbittoolStrip.Name = "DataPenerbittoolStrip";
             this.DataPenerbittoolStrip.Size = new System.Drawing.Size(157, 31);
             this.DataPenerbittoolStrip.Text = "Data Penerbit";
+            this.DataPenerbittoolStrip.Click += new System.EventHandler(this.DataPenerbittoolStrip_Click);
+            // 
+            // toolStripDataPengarang
+            // 
+            this.toolStripDataPengarang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDataPengarang.Name = "toolStripDataPengarang";
+            this.toolStripDataPengarang.Size = new System.Drawing.Size(177, 31);
+            this.toolStripDataPengarang.Text = "Data Pengarang";
+            this.toolStripDataPengarang.Click += new System.EventHandler(this.toolStripDataPengarang_Click);
             // 
             // dataBukuToolStripMenuItem
             // 
@@ -162,14 +171,6 @@
             this.axCrystalReport1.Size = new System.Drawing.Size(28, 28);
             this.axCrystalReport1.TabIndex = 1;
             this.axCrystalReport1.Enter += new System.EventHandler(this.axCrystalReport1_Enter);
-            // 
-            // toolStripDataPengarang
-            // 
-            this.toolStripDataPengarang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDataPengarang.Name = "toolStripDataPengarang";
-            this.toolStripDataPengarang.Size = new System.Drawing.Size(177, 31);
-            this.toolStripDataPengarang.Text = "Data Pengarang";
-            this.toolStripDataPengarang.Click += new System.EventHandler(this.toolStripDataPengarang_Click);
             // 
             // FormMenuUtama
             // 

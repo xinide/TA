@@ -34,8 +34,6 @@
             this.ButtonSimpanBuku = new System.Windows.Forms.Button();
             this.TextJumlahBuku = new System.Windows.Forms.TextBox();
             this.TextTahunTerbit = new System.Windows.Forms.TextBox();
-            this.TextPenerbit = new System.Windows.Forms.TextBox();
-            this.TextPengarang = new System.Windows.Forms.TextBox();
             this.TextJudulBuku = new System.Windows.Forms.TextBox();
             this.TextBuku = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +50,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.GroupInputBuku.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GroupCariBukuPeminjaman.SuspendLayout();
@@ -59,13 +59,13 @@
             // 
             // GroupInputBuku
             // 
+            this.GroupInputBuku.Controls.Add(this.comboBox2);
+            this.GroupInputBuku.Controls.Add(this.comboBox1);
             this.GroupInputBuku.Controls.Add(this.ButtonKoreksiBuku);
             this.GroupInputBuku.Controls.Add(this.ButtonHapusBuku);
             this.GroupInputBuku.Controls.Add(this.ButtonSimpanBuku);
             this.GroupInputBuku.Controls.Add(this.TextJumlahBuku);
             this.GroupInputBuku.Controls.Add(this.TextTahunTerbit);
-            this.GroupInputBuku.Controls.Add(this.TextPenerbit);
-            this.GroupInputBuku.Controls.Add(this.TextPengarang);
             this.GroupInputBuku.Controls.Add(this.TextJudulBuku);
             this.GroupInputBuku.Controls.Add(this.TextBuku);
             this.GroupInputBuku.Controls.Add(this.label6);
@@ -124,20 +124,6 @@
             this.TextTahunTerbit.Name = "TextTahunTerbit";
             this.TextTahunTerbit.Size = new System.Drawing.Size(237, 35);
             this.TextTahunTerbit.TabIndex = 10;
-            // 
-            // TextPenerbit
-            // 
-            this.TextPenerbit.Location = new System.Drawing.Point(193, 157);
-            this.TextPenerbit.Name = "TextPenerbit";
-            this.TextPenerbit.Size = new System.Drawing.Size(500, 35);
-            this.TextPenerbit.TabIndex = 9;
-            // 
-            // TextPengarang
-            // 
-            this.TextPengarang.Location = new System.Drawing.Point(193, 115);
-            this.TextPengarang.Name = "TextPengarang";
-            this.TextPengarang.Size = new System.Drawing.Size(500, 35);
-            this.TextPengarang.TabIndex = 8;
             // 
             // TextJudulBuku
             // 
@@ -290,6 +276,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(193, 118);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(500, 35);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(193, 159);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(500, 35);
+            this.comboBox2.TabIndex = 16;
+            // 
             // FormDataBuku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
@@ -322,8 +324,6 @@
         private System.Windows.Forms.Button ButtonSimpanBuku;
         private System.Windows.Forms.TextBox TextJumlahBuku;
         private System.Windows.Forms.TextBox TextTahunTerbit;
-        private System.Windows.Forms.TextBox TextPenerbit;
-        private System.Windows.Forms.TextBox TextPengarang;
         private System.Windows.Forms.TextBox TextJudulBuku;
         private System.Windows.Forms.TextBox TextBuku;
         private System.Windows.Forms.Label label6;
@@ -340,5 +340,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
