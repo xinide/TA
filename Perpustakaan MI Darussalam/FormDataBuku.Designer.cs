@@ -76,14 +76,14 @@
             this.GroupInputBuku.Controls.Add(this.label1);
             this.GroupInputBuku.Location = new System.Drawing.Point(12, 243);
             this.GroupInputBuku.Name = "GroupInputBuku";
-            this.GroupInputBuku.Size = new System.Drawing.Size(480, 353);
+            this.GroupInputBuku.Size = new System.Drawing.Size(712, 353);
             this.GroupInputBuku.TabIndex = 7;
             this.GroupInputBuku.TabStop = false;
             this.GroupInputBuku.Text = "Input Buku";
             // 
             // ButtonKoreksiBuku
             // 
-            this.ButtonKoreksiBuku.Location = new System.Drawing.Point(330, 288);
+            this.ButtonKoreksiBuku.Location = new System.Drawing.Point(580, 288);
             this.ButtonKoreksiBuku.Name = "ButtonKoreksiBuku";
             this.ButtonKoreksiBuku.Size = new System.Drawing.Size(100, 49);
             this.ButtonKoreksiBuku.TabIndex = 14;
@@ -93,7 +93,7 @@
             // 
             // ButtonHapusBuku
             // 
-            this.ButtonHapusBuku.Location = new System.Drawing.Point(209, 288);
+            this.ButtonHapusBuku.Location = new System.Drawing.Point(458, 288);
             this.ButtonHapusBuku.Name = "ButtonHapusBuku";
             this.ButtonHapusBuku.Size = new System.Drawing.Size(104, 49);
             this.ButtonHapusBuku.TabIndex = 13;
@@ -103,7 +103,7 @@
             // 
             // ButtonSimpanBuku
             // 
-            this.ButtonSimpanBuku.Location = new System.Drawing.Point(87, 288);
+            this.ButtonSimpanBuku.Location = new System.Drawing.Point(325, 288);
             this.ButtonSimpanBuku.Name = "ButtonSimpanBuku";
             this.ButtonSimpanBuku.Size = new System.Drawing.Size(105, 49);
             this.ButtonSimpanBuku.TabIndex = 12;
@@ -129,21 +129,21 @@
             // 
             this.TextPenerbit.Location = new System.Drawing.Point(193, 157);
             this.TextPenerbit.Name = "TextPenerbit";
-            this.TextPenerbit.Size = new System.Drawing.Size(237, 35);
+            this.TextPenerbit.Size = new System.Drawing.Size(500, 35);
             this.TextPenerbit.TabIndex = 9;
             // 
             // TextPengarang
             // 
             this.TextPengarang.Location = new System.Drawing.Point(193, 115);
             this.TextPengarang.Name = "TextPengarang";
-            this.TextPengarang.Size = new System.Drawing.Size(237, 35);
+            this.TextPengarang.Size = new System.Drawing.Size(500, 35);
             this.TextPengarang.TabIndex = 8;
             // 
             // TextJudulBuku
             // 
             this.TextJudulBuku.Location = new System.Drawing.Point(193, 73);
             this.TextJudulBuku.Name = "TextJudulBuku";
-            this.TextJudulBuku.Size = new System.Drawing.Size(237, 35);
+            this.TextJudulBuku.Size = new System.Drawing.Size(500, 35);
             this.TextJudulBuku.TabIndex = 7;
             // 
             // TextBuku
@@ -213,7 +213,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 192);
+            this.dataGridView1.Size = new System.Drawing.Size(1107, 192);
             this.dataGridView1.TabIndex = 6;
             // 
             // GroupCariBukuPeminjaman
@@ -222,7 +222,7 @@
             this.GroupCariBukuPeminjaman.Controls.Add(this.ComboPilihanBuku);
             this.GroupCariBukuPeminjaman.Controls.Add(this.label8);
             this.GroupCariBukuPeminjaman.Controls.Add(this.label7);
-            this.GroupCariBukuPeminjaman.Location = new System.Drawing.Point(543, 243);
+            this.GroupCariBukuPeminjaman.Location = new System.Drawing.Point(739, 243);
             this.GroupCariBukuPeminjaman.Name = "GroupCariBukuPeminjaman";
             this.GroupCariBukuPeminjaman.Size = new System.Drawing.Size(380, 163);
             this.GroupCariBukuPeminjaman.TabIndex = 8;
@@ -272,7 +272,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(631, 431);
+            this.button1.Location = new System.Drawing.Point(843, 423);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 54);
             this.button1.TabIndex = 4;
@@ -282,7 +282,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(764, 431);
+            this.button2.Location = new System.Drawing.Point(971, 423);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 54);
             this.button2.TabIndex = 9;
@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 608);
+            this.ClientSize = new System.Drawing.Size(1135, 608);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GroupInputBuku);

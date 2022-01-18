@@ -36,8 +36,6 @@
             this.ButtonGK = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.TextKBPeminjaman = new System.Windows.Forms.TextBox();
-            this.TextIDAnggota = new System.Windows.Forms.TextBox();
             this.TextKodePinjam = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.ComboIDAnggota = new System.Windows.Forms.ComboBox();
+            this.ComboKodeBuku = new System.Windows.Forms.ComboBox();
             this.GroupInputPeminjaman.SuspendLayout();
             this.GroupCariPeminjaman.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,14 +70,14 @@
             // 
             // GroupInputPeminjaman
             // 
+            this.GroupInputPeminjaman.Controls.Add(this.ComboKodeBuku);
+            this.GroupInputPeminjaman.Controls.Add(this.ComboIDAnggota);
             this.GroupInputPeminjaman.Controls.Add(this.ButtonKoreksiPeminjaman);
             this.GroupInputPeminjaman.Controls.Add(this.ButtonHapusPeminjaman);
             this.GroupInputPeminjaman.Controls.Add(this.ButtonSimpanPeminjaman);
             this.GroupInputPeminjaman.Controls.Add(this.ButtonGK);
             this.GroupInputPeminjaman.Controls.Add(this.dateTimePicker2);
             this.GroupInputPeminjaman.Controls.Add(this.dateTimePicker1);
-            this.GroupInputPeminjaman.Controls.Add(this.TextKBPeminjaman);
-            this.GroupInputPeminjaman.Controls.Add(this.TextIDAnggota);
             this.GroupInputPeminjaman.Controls.Add(this.TextKodePinjam);
             this.GroupInputPeminjaman.Controls.Add(this.label5);
             this.GroupInputPeminjaman.Controls.Add(this.label4);
@@ -153,22 +153,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(217, 35);
             this.dateTimePicker1.TabIndex = 8;
-            // 
-            // TextKBPeminjaman
-            // 
-            this.TextKBPeminjaman.Location = new System.Drawing.Point(250, 164);
-            this.TextKBPeminjaman.Margin = new System.Windows.Forms.Padding(4);
-            this.TextKBPeminjaman.Name = "TextKBPeminjaman";
-            this.TextKBPeminjaman.Size = new System.Drawing.Size(252, 35);
-            this.TextKBPeminjaman.TabIndex = 7;
-            // 
-            // TextIDAnggota
-            // 
-            this.TextIDAnggota.Location = new System.Drawing.Point(250, 121);
-            this.TextIDAnggota.Margin = new System.Windows.Forms.Padding(4);
-            this.TextIDAnggota.Name = "TextIDAnggota";
-            this.TextIDAnggota.Size = new System.Drawing.Size(252, 35);
-            this.TextIDAnggota.TabIndex = 6;
             // 
             // TextKodePinjam
             // 
@@ -313,6 +297,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // ComboIDAnggota
+            // 
+            this.ComboIDAnggota.FormattingEnabled = true;
+            this.ComboIDAnggota.Location = new System.Drawing.Point(250, 124);
+            this.ComboIDAnggota.Name = "ComboIDAnggota";
+            this.ComboIDAnggota.Size = new System.Drawing.Size(252, 35);
+            this.ComboIDAnggota.TabIndex = 14;
+            // 
+            // ComboKodeBuku
+            // 
+            this.ComboKodeBuku.FormattingEnabled = true;
+            this.ComboKodeBuku.Location = new System.Drawing.Point(250, 165);
+            this.ComboKodeBuku.Name = "ComboKodeBuku";
+            this.ComboKodeBuku.Size = new System.Drawing.Size(252, 35);
+            this.ComboKodeBuku.TabIndex = 15;
+            // 
             // FormPeminjaman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
@@ -347,8 +347,6 @@
         private System.Windows.Forms.Button ButtonGK;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox TextKBPeminjaman;
-        private System.Windows.Forms.TextBox TextIDAnggota;
         private System.Windows.Forms.TextBox TextKodePinjam;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -362,5 +360,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox ComboKodeBuku;
+        private System.Windows.Forms.ComboBox ComboIDAnggota;
     }
 }

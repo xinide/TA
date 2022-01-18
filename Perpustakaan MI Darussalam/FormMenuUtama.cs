@@ -113,5 +113,10 @@ namespace Perpustakaan_MI_Darussalam
         {
 
         }
+
+        private void toolStripDataPengarang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

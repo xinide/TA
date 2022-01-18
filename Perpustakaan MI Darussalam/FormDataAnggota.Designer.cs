@@ -247,7 +247,7 @@
             // 
             this.TextNamaAnggota.Location = new System.Drawing.Point(230, 88);
             this.TextNamaAnggota.Name = "TextNamaAnggota";
-            this.TextNamaAnggota.Size = new System.Drawing.Size(238, 35);
+            this.TextNamaAnggota.Size = new System.Drawing.Size(458, 35);
             this.TextNamaAnggota.TabIndex = 5;
             // 
             // label1
