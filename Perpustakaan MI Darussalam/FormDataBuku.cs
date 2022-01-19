@@ -27,8 +27,8 @@ namespace Perpustakaan_MI_Darussalam
         {
             TextBuku.Clear();
             TextJudulBuku.Clear();
-            TextPengarang.Clear();
-            TextPenerbit.Clear();
+            ComboBoxPengarang.Text = "";
+            ComboBoxPenerbit.Text = "";
             TextTahunTerbit.Clear();
             TextJumlahBuku.Clear();
         }
@@ -92,8 +92,8 @@ namespace Perpustakaan_MI_Darussalam
                     ("INSERT INTO Buku (Kode_Buku, Judul_Buku, Pengarang, Penerbit, Tahun_Terbit, Jumlah)" +
                     "VALUES ('" + TextBuku.Text + "'," +
                     "'" + TextJudulBuku.Text + "'," +
-                    "'" + TextPengarang.Text + "'," +
-                    "'" + TextPenerbit.Text + "'," +
+                    "'" + ComboBoxPengarang.Text + "'," +
+                    "'" + ComboBoxPenerbit.Text + "'," +
                     "'" + TextTahunTerbit.Text + "'," +
                     "'" + TextJumlahBuku.Text + "')", Perpustakaan.con);
                 Perpustakaan.cmd.ExecuteNonQuery();
@@ -169,8 +169,8 @@ namespace Perpustakaan_MI_Darussalam
                 brs = dataGridView1.CurrentRow.Index;
                 TextBuku.Text = dataGridView1[0, brs].Value.ToString();
                 TextJudulBuku.Text = dataGridView1[1, brs].Value.ToString();
-                TextPengarang.Text = dataGridView1[2, brs].Value.ToString();
-                TextPenerbit.Text = dataGridView1[3, brs].Value.ToString();
+                ComboBoxPengarang.Text = dataGridView1[2, brs].Value.ToString();
+                ComboBoxPenerbit.Text = dataGridView1[3, brs].Value.ToString();
                 TextTahunTerbit.Text = dataGridView1[4, brs].Value.ToString();
             }
             else if (ButtonKoreksiBuku.Text == "Edit")
@@ -183,8 +183,8 @@ namespace Perpustakaan_MI_Darussalam
                 Perpustakaan.cmd = new OleDbCommand
                     ("UPDATE Buku set " +
                     "Judul_Buku ='" + TextJudulBuku.Text + "'," +
-                    "Penerbit ='" + TextPenerbit.Text + "'," +
-                    "Pengarang ='" + TextPengarang.Text + "'," +
+                    "Penerbit ='" + ComboBoxPenerbit.Text + "'," +
+                    "Pengarang ='" + ComboBoxPengarang.Text + "'," +
                     "Tahun_Terbit ='" + TextTahunTerbit.Text + "',"+
                     "Jumlah =" + TextJumlahBuku.Text + " where " +
                     "Kode_Buku = " + TextBuku.Text + "", Perpustakaan.con);

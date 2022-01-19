@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.GroupInputBuku = new System.Windows.Forms.GroupBox();
+            this.ComboBoxPenerbit = new System.Windows.Forms.ComboBox();
+            this.ComboBoxPengarang = new System.Windows.Forms.ComboBox();
             this.ButtonKoreksiBuku = new System.Windows.Forms.Button();
             this.ButtonHapusBuku = new System.Windows.Forms.Button();
             this.ButtonSimpanBuku = new System.Windows.Forms.Button();
@@ -50,8 +52,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.GroupInputBuku.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GroupCariBukuPeminjaman.SuspendLayout();
@@ -59,8 +59,8 @@
             // 
             // GroupInputBuku
             // 
-            this.GroupInputBuku.Controls.Add(this.comboBox2);
-            this.GroupInputBuku.Controls.Add(this.comboBox1);
+            this.GroupInputBuku.Controls.Add(this.ComboBoxPenerbit);
+            this.GroupInputBuku.Controls.Add(this.ComboBoxPengarang);
             this.GroupInputBuku.Controls.Add(this.ButtonKoreksiBuku);
             this.GroupInputBuku.Controls.Add(this.ButtonHapusBuku);
             this.GroupInputBuku.Controls.Add(this.ButtonSimpanBuku);
@@ -80,6 +80,22 @@
             this.GroupInputBuku.TabIndex = 7;
             this.GroupInputBuku.TabStop = false;
             this.GroupInputBuku.Text = "Input Buku";
+            // 
+            // ComboBoxPenerbit
+            // 
+            this.ComboBoxPenerbit.FormattingEnabled = true;
+            this.ComboBoxPenerbit.Location = new System.Drawing.Point(193, 159);
+            this.ComboBoxPenerbit.Name = "ComboBoxPenerbit";
+            this.ComboBoxPenerbit.Size = new System.Drawing.Size(500, 35);
+            this.ComboBoxPenerbit.TabIndex = 16;
+            // 
+            // ComboBoxPengarang
+            // 
+            this.ComboBoxPengarang.FormattingEnabled = true;
+            this.ComboBoxPengarang.Location = new System.Drawing.Point(193, 118);
+            this.ComboBoxPengarang.Name = "ComboBoxPengarang";
+            this.ComboBoxPengarang.Size = new System.Drawing.Size(500, 35);
+            this.ComboBoxPengarang.TabIndex = 15;
             // 
             // ButtonKoreksiBuku
             // 
@@ -196,7 +212,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1107, 192);
@@ -276,22 +292,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(193, 118);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(500, 35);
-            this.comboBox1.TabIndex = 15;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(193, 159);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(500, 35);
-            this.comboBox2.TabIndex = 16;
-            // 
             // FormDataBuku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
@@ -340,7 +340,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ComboBoxPenerbit;
+        private System.Windows.Forms.ComboBox ComboBoxPengarang;
     }
 }

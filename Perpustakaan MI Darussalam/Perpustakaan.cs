@@ -18,6 +18,12 @@ namespace Perpustakaan_MI_Darussalam
         public static OleDbDataAdapter daAdmin;
         public static DataTable tblAdmin = new DataTable();
 
+        public static OleDbDataAdapter daPenerbit;
+        public static DataTable tblPenerbit = new DataTable();
+
+        public static OleDbDataAdapter daPengarang;
+        public static DataTable tblPengarang = new DataTable();
+
         public static OleDbDataAdapter daBuku;
         public static DataTable tblBuku = new DataTable();
 

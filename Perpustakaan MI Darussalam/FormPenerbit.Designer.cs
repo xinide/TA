@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TextCariPenerbit = new System.Windows.Forms.TextBox();
+            this.ComboPilihanPenerbit = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@
             this.ButtonKoreksiPenerbit.TabIndex = 10;
             this.ButtonKoreksiPenerbit.Text = "Koreksi";
             this.ButtonKoreksiPenerbit.UseVisualStyleBackColor = true;
+            this.ButtonKoreksiPenerbit.Click += new System.EventHandler(this.ButtonKoreksiPenerbit_Click);
             // 
             // ButtonHapusPenerbit
             // 
@@ -82,6 +83,7 @@
             this.ButtonHapusPenerbit.TabIndex = 9;
             this.ButtonHapusPenerbit.Text = "Hapus";
             this.ButtonHapusPenerbit.UseVisualStyleBackColor = true;
+            this.ButtonHapusPenerbit.Click += new System.EventHandler(this.ButtonHapusPenerbit_Click);
             // 
             // ButtonSimpanPenerbit
             // 
@@ -91,6 +93,7 @@
             this.ButtonSimpanPenerbit.TabIndex = 8;
             this.ButtonSimpanPenerbit.Text = "Simpan";
             this.ButtonSimpanPenerbit.UseVisualStyleBackColor = true;
+            this.ButtonSimpanPenerbit.Click += new System.EventHandler(this.ButtonSimpanPenerbit_Click);
             // 
             // TextNamaPenerbit
             // 
@@ -105,6 +108,7 @@
             this.TextIDPenerbit.Name = "TextIDPenerbit";
             this.TextIDPenerbit.Size = new System.Drawing.Size(248, 35);
             this.TextIDPenerbit.TabIndex = 4;
+            this.TextIDPenerbit.TextChanged += new System.EventHandler(this.TextIDPenerbit_TextChanged);
             // 
             // label2
             // 
@@ -126,8 +130,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.TextCariPenerbit);
+            this.groupBox2.Controls.Add(this.ComboPilihanPenerbit);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(746, 12);
@@ -138,20 +142,25 @@
             this.groupBox2.Text = "Cari Data Penerbit";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // textBox1
+            // TextCariPenerbit
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 35);
-            this.textBox1.TabIndex = 3;
+            this.TextCariPenerbit.Location = new System.Drawing.Point(128, 94);
+            this.TextCariPenerbit.Name = "TextCariPenerbit";
+            this.TextCariPenerbit.Size = new System.Drawing.Size(275, 35);
+            this.TextCariPenerbit.TabIndex = 3;
+            this.TextCariPenerbit.TextChanged += new System.EventHandler(this.TextCariPenerbit_TextChanged);
             // 
-            // comboBox1
+            // ComboPilihanPenerbit
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(128, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(275, 35);
-            this.comboBox1.TabIndex = 2;
+            this.ComboPilihanPenerbit.FormattingEnabled = true;
+            this.ComboPilihanPenerbit.Items.AddRange(new object[] {
+            "Kode Penerbit",
+            "Nama Penerbit"});
+            this.ComboPilihanPenerbit.Location = new System.Drawing.Point(128, 37);
+            this.ComboPilihanPenerbit.Name = "ComboPilihanPenerbit";
+            this.ComboPilihanPenerbit.Size = new System.Drawing.Size(275, 35);
+            this.ComboPilihanPenerbit.TabIndex = 2;
+            this.ComboPilihanPenerbit.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -180,6 +189,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Batal";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -189,6 +199,7 @@
             this.button4.TabIndex = 12;
             this.button4.Text = "Tutup";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -236,8 +247,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox ComboPilihanPenerbit;
+        private System.Windows.Forms.TextBox TextCariPenerbit;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;

@@ -26,8 +26,8 @@ namespace Perpustakaan_MI_Darussalam
         void bersih()
         {
             TextKodePinjam.Clear();
-            ComboIDAnggota.SelectedIndex();
-            TextKBPeminjaman.Clear();
+            ComboIDAnggota.Text = "";
+            ComboKodeBuku.Text = "";
         }
 
 
@@ -49,17 +49,41 @@ namespace Perpustakaan_MI_Darussalam
             dataGridView1.Columns[1].HeaderText = "ID Anggota";
             dataGridView1.Columns[1].Width = 130;
 
-            dataGridView1.Columns[2].HeaderText = "Kode Buku";
-            dataGridView1.Columns[2].Width = 140;
+            dataGridView1.Columns[2].HeaderText = "Nama Anggota";
+            dataGridView1.Columns[2].Width = 150;
 
-            dataGridView1.Columns[3].HeaderText = "Status";
-            dataGridView1.Columns[3].Width = 120;
+            dataGridView1.Columns[3].HeaderText = "Kode Buku";
+            dataGridView1.Columns[3].Width = 140;
 
-            dataGridView1.Columns[4].HeaderText = "Tanggal Pinjam";
+            dataGridView1.Columns[4].HeaderText = "Judul Buku";
             dataGridView1.Columns[4].Width = 150;
 
-            dataGridView1.Columns[5].HeaderText = "Tanggal Batas Pinjam";
-            dataGridView1.Columns[5].Width = 150;
+            dataGridView1.Columns[5].HeaderText = "Status";
+            dataGridView1.Columns[5].Width = 120;
+
+            dataGridView1.Columns[6].HeaderText = "Tanggal Pinjam";
+            dataGridView1.Columns[6].Width = 150;
+
+            dataGridView1.Columns[6].HeaderText = "Tanggal Batas Pinjam";
+            dataGridView1.Columns[6].Width = 150;
+
+            ComboIDAnggota.Items.Clear();
+            Perpustakaan.cmd = new OleDbCommand
+            ("select * from Anggota", Perpustakaan.con);
+            Perpustakaan.dtr = Perpustakaan.cmd.ExecuteReader();
+            while (Perpustakaan.dtr.Read())
+            {
+                ComboIDAnggota.Items.Add(Perpustakaan.dtr["ID_Anggota"].ToString());
+            }
+
+            ComboKodeBuku.Items.Clear();
+            Perpustakaan.cmd = new OleDbCommand
+            ("select * from Buku", Perpustakaan.con);
+            Perpustakaan.dtr = Perpustakaan.cmd.ExecuteReader();
+            while (Perpustakaan.dtr.Read())
+            {
+                ComboKodeBuku.Items.Add(Perpustakaan.dtr["Kode_Buku"].ToString());
+            }
         }
 
         private void ButtonGK_Click(object sender, EventArgs e)
@@ -89,13 +113,13 @@ namespace Perpustakaan_MI_Darussalam
                 bersih();
                 TextKodePinjam.Focus();
             }
-            else if (TextIDAnggota.Text.Trim() == "")
+            else if (ComboIDAnggota.Text.Trim() == "")
             {
                 MessageBox.Show("ID Anggota masih kosong", "pesan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 bersih();
                 TextKodePinjam.Focus();
             }
-            else if (TextKBPeminjaman.Text.Trim() == "")
+            else if (TextKodePinjam.Text.Trim() == "")
             {
                 MessageBox.Show("Kode Buku masih kosong", "pesan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 bersih();
@@ -104,10 +128,10 @@ namespace Perpustakaan_MI_Darussalam
             else
             {
                 Perpustakaan.cmd = new OleDbCommand
-                    ("INSERT INTO Peminjaman (Kode_Pinjam, ID_Anggota, Kode_Buku, Tanggal_Pinjam, Tanggal_BatasPinjam, Status)" +
+                    ("INSERT INTO Peminjaman (Kode_Pinjam, ID_Anggota, Nama_Anggota, Kode_Buku, Judul_Buku, Tanggal_Pinjam, Tanggal_BatasPinjam, Status)" +
                     "VALUES ('" + TextKodePinjam.Text + "'," +
-                    "'" + TextIDAnggota.Text + "'," +
-                    "'" + TextKBPeminjaman.Text + "'," +
+                    "'" + ComboIDAnggota.Text + "'," +
+                    "'" + ComboKodeBuku.Text + "'," +
                     "'" + dateTimePicker1.Value + "'," +
                     "'" + dateTimePicker2.Value + "'," +
                     "'" + "Dipinjam" + "')", connection: Perpustakaan.con);
@@ -183,8 +207,8 @@ namespace Perpustakaan_MI_Darussalam
                 int brs;
                 brs = dataGridView1.CurrentRow.Index;
                 TextKodePinjam.Text = dataGridView1[0, brs].Value.ToString();
-                TextIDAnggota.Text = dataGridView1[1, brs].Value.ToString();
-                TextKBPeminjaman.Text = dataGridView1[2, brs].Value.ToString();
+                ComboIDAnggota.Text = dataGridView1[1, brs].Value.ToString();
+                ComboKodeBuku.Text = dataGridView1[2, brs].Value.ToString();
                 dateTimePicker1.Value =
                     Convert.ToDateTime(dataGridView1[4, brs].Value);
                 dateTimePicker2.Value =
@@ -199,8 +223,8 @@ namespace Perpustakaan_MI_Darussalam
 
                 Perpustakaan.cmd = new OleDbCommand
                     ("update Peminjaman set " +
-                    "ID_Anggota ='" + TextIDAnggota.Text + "'," +
-                    "Kode_Buku ='" + TextKBPeminjaman.Text + "'," +
+                    "ID_Anggota ='" + ComboIDAnggota.Text + "'," +
+                    "Kode_Buku ='" + TextKodePinjam.Text + "'," +
                     "Tanggal_Pinjam ='" + dateTimePicker1.Text + "'," +
                     "Tanggal_BatasPinjam ='" + dateTimePicker2.Text + "' where " +
                     "Kode_Pinjam = '" + TextKodePinjam.Text + "'", Perpustakaan.con);
